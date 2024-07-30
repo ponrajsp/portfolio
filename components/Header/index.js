@@ -6,7 +6,7 @@ import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
 
-const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
+const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -70,14 +70,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               {!isBlog ? (
                 <div className="grid grid-cols-1">
                   <Button onClick={handleWorkScroll}>Work</Button>
-                  <Button onClick={handleAboutScroll}>About</Button>
-                  {showBlog && (
+                  {/* <Button onClick={handleAboutScroll}>About</Button> */}
+                  {/* {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
+                  )} */}
                   {showResume && (
                     <Button
                       onClick={() =>
-                        window.open("mailto:hello@chetanverma.com")
+                        window.open("mailto:ponraj.web19@gmail.com")
                       }
                     >
                       Resume
@@ -85,9 +85,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    // onClick={() => window.open("mailto:ponraj.web19@gmail.com")}
+                    onClick={handleContactScroll}
                   >
-                    Contact
+                    Contacts
                   </Button>
                 </div>
               ) : (
@@ -95,9 +96,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   <Button onClick={() => router.push("/")} classes="first:ml-1">
                     Home
                   </Button>
-                  {showBlog && (
+                  {/* {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
-                  )}
+                  )} */}
                   {showResume && (
                     <Button
                       onClick={() => router.push("/resume")}
@@ -108,9 +109,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    // onClick={() => window.open("mailto:ponraj.web19@gmail.com")}
+                    onClick={handleContactScroll}
                   >
-                    Contact
+                    Contacts
                   </Button>
                 </div>
               )}
@@ -132,10 +134,10 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         {!isBlog ? (
           <div className="flex">
             <Button onClick={handleWorkScroll}>Work</Button>
-            <Button onClick={handleAboutScroll}>About</Button>
-            {showBlog && (
+            {/* <Button onClick={handleAboutScroll}>About</Button> */}
+            {/* {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+            )} */}
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
@@ -145,8 +147,11 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
+            <Button 
+                // onClick={() => window.open("mailto:ponraj.web19@gmail.com")}
+                onClick={handleContactScroll}
+            >
+              Contacts
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
@@ -162,9 +167,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         ) : (
           <div className="flex">
             <Button onClick={() => router.push("/")}>Home</Button>
-            {showBlog && (
+            {/* {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
-            )}
+            )} */}
             {showResume && (
               <Button
                 onClick={() => router.push("/resume")}
@@ -173,10 +178,20 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                 Resume
               </Button>
             )}
-
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
-              Contact
-            </Button>
+            {showResume ? (
+              <Button
+                onClick={() => router.push("/")}
+                classes="first:ml-1"
+              >
+                Contacts
+              </Button>
+            ):
+            <Button 
+              // onClick={() => window.open("mailto:ponraj.web19@gmail.com")}
+              onClick={handleContactScroll}
+            >
+            Contacts
+          </Button>}
 
             {mounted && theme && data.darkMode && (
               <Button
