@@ -40,14 +40,14 @@ Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
 ### How To Deploy - 
 
 - There are many ways to Deploy this repo.
-- here we are gonna use netlify
-- Login into netlify with github
+- here we are gonna use vercel
+- Login into vercel with github
 - after login select the forked repo or the repo you want to deploy
-- after selecting netlify will automatially deploy your website.
+- after selecting vercel will automatially deploy your website.
 
 Quickes way to deploy this repo - 
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
+[![Deploy To Vercel]](https://vercel.com/new)
 
 
 ### How To Contribute - 
@@ -63,14 +63,6 @@ I would be very happy to review your PRs and all the awesome things that you can
 ### Thanks
 
 If you liked this portfolio template, don't forget to give it a ⭐.
-
-## Awesome Contributors
-[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
-
-## Supporting
-Many hours of hard work have gone into this project. Your support will be very appreciated!
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
 
 
 
