@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 // Local Data
 import data from "../../data/portfolio.json";
-
 const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBlog }) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
@@ -121,7 +120,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
         )}
       </Popover>
       <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
+        className={`hidden flex-row items-center justify-between sticky ${
           theme === "light" && "bg-white"
         } dark:text-white top-0 z-10 tablet:flex`}
       >

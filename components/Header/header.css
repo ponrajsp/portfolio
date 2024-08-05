@@ -1,0 +1,16 @@
+.flex-row.items-center {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background: hsla(0, 0%, 100%, .2);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .08);
+    transition: all .1s;
+    /* background-color: #fff; */
+    padding: 0px 45px;
+}
+.flex-row.items-center.justify-between.sticky.false {
+    background-color: darkslateblue !important;
+}
+.flex-row.items-center.justify-between.sticky.bg-white {
+    background-color: #fff !important;
+}
