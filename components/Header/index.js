@@ -9,10 +9,14 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
   const router = useRouter();
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
-
   const { name, showBlog, showResume } = data;
-
   useEffect(() => {
+    if(!localStorage.getItem('theme')) {
+      setTheme('light')
+      localStorage.setItem('theme', 'light')
+    } else {
+      setTheme('dark');
+    }
     setMounted(true);
   }, []);
 
@@ -121,14 +125,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, handleContactScroll, isBl
       </Popover>
       <div
         className={`hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
+          theme === "light" && "bg-white" } dark:text-white top-0 z-10 tablet:flex`}
       >
         <h1
           onClick={() => router.push("/")}
           className="font-medium cursor-pointer mob:p-2 laptop:p-0"
         >
-          {name}.
+          {name}
         </h1>
         {!isBlog ? (
           <div className="flex">
