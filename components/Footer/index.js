@@ -17,9 +17,9 @@ const Footer = ({}) => {
               TOGETHER
             </h1>
             <Button type="primary">Schedule a call</Button> */}
-            <h3>Email: <span style={{ fontWeight: '600'}}>ponrajsp20@gmail.com</span></h3>
-            <h3>Phone: <span style={{ fontWeight: '600'}}>+855 98999762, +91 6385887536</span></h3>
-            <h3>WhatsApp: <span style={{ fontWeight: '600'}}>+855 98999762</span></h3>
+            <h3>Email: <span style={{ fontWeight: '600'}}>ponrajsp20@gmail.com, ponraj.web19@gmail.com</span></h3>
+            <h3>Phone: <span style={{ fontWeight: '600'}}>+91 6385887536</span></h3>
+            <h3>WhatsApp: <span style={{ fontWeight: '600'}}>+91 6385887536</span></h3>
             <div className="mt-10">
               <Socials />
             </div>
